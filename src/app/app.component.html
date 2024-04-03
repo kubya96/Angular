@@ -1,0 +1,48 @@
+
+
+<div class="parent">
+    <div class="right">
+        <h1>{{date}}</h1>
+        <h1 class="time">{{time}}</h1>
+        <hr>
+        <h1 [style]="{color:vcol}">Style Binding1 </h1>
+        <h1 [style]="mystyle">Style Binding2 </h1>
+        <h1 [style.color]="hasError?'green':'red'">Style Binding3 </h1>
+        <hr>
+        <h1>Event Binding:</h1>
+        <button (click)="incremenet()">Increase</button>
+        <button (click)="decremenet()">Decrease</button>
+        <h1>counter:{{counter}}</h1>
+
+        name: <input type="text" (input)="changeName($event)">
+        <h1>New name:{{name}}</h1>
+        <hr>
+         <h1>Two way data Binding</h1>
+         City: <input type="text"[(ngModel)]="city" >
+         <h1>{{city}}</h1>
+         <button (click)="cityUpdate()">update</button>
+         <hr>
+         <h1 *ngIf = "showHeading" >ngIf</h1>
+         <h1 *ngIf = "!data">Loading...</h1>
+         <h1 *ngIf = "data">{{data}}</h1>
+         <hr>
+         <h1 *ngFor="let n of num; index as i"> this is paraghraph /{{n}} {{i+1}}</h1>
+         <hr>
+         <h1>{{persion | json }}</h1>
+         <h1>{{ dob | date:'dd/MM/yyyy' }}</h1>
+         <h1>{{ num1 | percent }}</h1>
+         <h1>{{company | slice:2:7}} </h1>
+         <h1>{{company}}</h1>
+
+
+        
+    </div>
+    <div class="left">
+        <img src="{{path}}" alt="No img">
+        <hr>
+        <img src="{{path1}}" alt="No img">
+        <hr>
+        <h1 class="{{cname}}">this is Heading</h1>       
+    </div>
+
+</div>

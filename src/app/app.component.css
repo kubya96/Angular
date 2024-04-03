@@ -1,0 +1,30 @@
+
+.special{
+    border: 3px solid black;
+    /* border: 5px solid white; */
+    
+}
+.pecial{
+    background-color: blue;
+    /* border: 1px solid black; */
+}
+.parent{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+.left{
+    width: 50%;
+    height: 10%;
+}
+.right{
+    width: 50%;
+    height: 90%;
+    position: relative;
+}
+.time{
+    top: 0px;
+    position: absolute;
+    left: 150px;
+}
+
